@@ -11,6 +11,6 @@ typedef struct {
     Sol   result[4];
 } Combo;
 
-void showCombo(const Combo* combo);
+
 
 #endif
