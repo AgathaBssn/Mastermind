@@ -26,7 +26,6 @@ int main(void) {
         showCombo(&x);
     }
     sayBye();
-    
 
     return 0;
 }
