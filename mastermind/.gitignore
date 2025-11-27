@@ -22,6 +22,12 @@ Thumbs.db
 # IDE files
 .vscode/
 .vs/
+.vs
+Mastermind/vs/
+mastermind/vs
+Mastermind/vs
+mastermind/vs/
+
 .idea/
 *.suo
 *.user
