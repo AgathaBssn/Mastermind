@@ -32,3 +32,7 @@ int askToPlay() {
     }
     return choice;
 }
+
+void sayBye() {
+    printf("\n Thank you for playing with me");
+}

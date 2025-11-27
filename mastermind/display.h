@@ -9,4 +9,7 @@ void showCombo(const Combo* combo);
 //@returns int 1 if yes 0 if no
 int askToPlay();
 
+//Last word to the player before closed the game
+void sayBye();
+
 #endif
