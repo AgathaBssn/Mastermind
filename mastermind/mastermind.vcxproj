@@ -123,10 +123,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="colors.c" />
+    <ClCompile Include="combo.c" />
+    <ClCompile Include="display.c" />
+    <ClCompile Include="main.c" />
     <ClCompile Include="mastermind.c" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="colors.h" />
+    <ClInclude Include="combo.h" />
+    <ClInclude Include="display.h" />
+    <ClInclude Include="sol.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
