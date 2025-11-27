@@ -1,0 +1,54 @@
+# Compiled source files
+*.class
+*.o
+*.so
+*.exe
+*.dll
+
+# Packages
+*.jar
+*.war
+*.ear
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Node.js dependencies
+node_modules/
+
+# Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment variables
+.env
+
+# Build output
+/dist/
+/build/
+/out/
+
+# Others
+*.bak
+*.tmp
+
+# Mastermind specific (if applicable)
+# Add any temp or output files your project generates here
+
