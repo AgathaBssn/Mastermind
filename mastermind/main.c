@@ -34,7 +34,7 @@ int main(void) {
         while (currentGameState->turn < 12 && !won) {
             int status = turn(currentGameState);
             if (status == 1) {
-                printf("Bravo, vous avez gagné!\n");
+                printf("Well done!\n");
                 won = 1;
             }
             else {
@@ -43,7 +43,7 @@ int main(void) {
         }
 
         if (!won) {
-            printf("Game over, vous avez perdu. La solution était :\n");
+            printf("Game over, the soluce was :\n");
             showCombo(&currentGameState->secret);
         }
         //free the gamestate

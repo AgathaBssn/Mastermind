@@ -8,10 +8,10 @@ Gamestate* initGameState(Combo* soluce) {
 	Gamestate* gameState = (Gamestate*)malloc(sizeof(Gamestate));
 	//init turn
 	gameState->turn = 0;
-	//copy the solution into the gamestate
-	for (int i = 0; i < 4; i++) {
-		gameState->secret.attempt[i] = soluce->attempt[i];
-		gameState->secret.result[i] = soluce->result[i];
+	//copy the solution into the gamestate and SOL_CORRECT for the result
+    for (int i = 0; i < 4; i++) {
+        gameState->secret.attempt[i] = soluce->attempt[i];
+        gameState->secret.result[i] = SOL_CORRECT;
 	}
 	//initialize history
 	for (int j = 0; j < 12; j++) {
