@@ -1,29 +1,39 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
 #include "combo.h"
 #include "display.h"
+#include "gamestate.h"
+#include "mastermind.h"
 
 int main(void) {
+    srand(time(NULL));
     int stillPlaying = 0;
 
     stillPlaying = askToPlay();
 
     if (stillPlaying) {
-        Combo x = {
+        //init the game
+        // //TODO call init a game
+        //init player combo to guess
+        Combo secret = {
         { COLOR_UNDEF, COLOR_UNDEF, COLOR_UNDEF, COLOR_UNDEF },
         { SOL_UNCHECKED, SOL_UNCHECKED, SOL_UNCHECKED, SOL_UNCHECKED }
         };
 
-        showCombo(&x);
+        //generate the solution
+        initGame(&secret);
 
-        x.attempt[0] = COLOR_R;
-        x.attempt[1] = COLOR_G;
-        x.attempt[2] = COLOR_B;
-        x.attempt[3] = COLOR_Y;
+        //add the solution to the game state
+        Gamestate *currentGameState = initGameState(&secret);
 
-        x.result[0] = SOL_PARTIAL;
-        x.result[1] = SOL_CORRECT;
+        //launch turns with gameloop
 
-        showCombo(&x);
+        showCombo(&secret); 
+
+       
     }
     sayBye();
 
