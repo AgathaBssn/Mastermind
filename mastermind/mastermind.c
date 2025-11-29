@@ -30,17 +30,17 @@ int initGame(Combo* soluce) {
 }
 
 int turn(Gamestate* gameState) {
+
+    Combo* currentGuess = getPlayerGuess();
+
+    gameState->history[gameState->turn] = *currentGuess;
+
+    int status = checkCombinaison(gameState);
+
     
-    //ask the player to guess
-    Combo* currentguess = getPlayerGuess();
+    showCombo(&gameState->history[gameState->turn]);
 
-    //ask for verification
-	gameState->history[gameState->turn] = *currentguess;
-	int status = checkCombinaison(gameState);
-
-    //show result
-    showCombo(currentguess);
-    free(currentguess);
+    free(currentGuess);
 
     return status;
 }

@@ -29,8 +29,23 @@ int main(void) {
         //add the solution to the game state
         Gamestate *currentGameState = initGameState(&secret);
 
-        //launch turns with gameloop
-		turn(currentGameState);
+        int won = 0;
+
+        while (currentGameState->turn < 12 && !won) {
+            int status = turn(currentGameState);
+            if (status == 1) {
+                printf("Bravo, vous avez gagné!\n");
+                won = 1;
+            }
+            else {
+                currentGameState->turn++;
+            }
+        }
+
+        if (!won) {
+            printf("Game over, vous avez perdu. La solution était :\n");
+            showCombo(&currentGameState->secret);
+        }
         //free the gamestate
 		free(currentGameState);
 
