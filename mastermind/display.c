@@ -33,6 +33,16 @@ int askToPlay() {
     return choice;
 }
 
+void askPlayerToGuess(Combo* playerCombo) {
+    char input[5] = "    ";
+    printf("Enter your guess (4 letters among Y, B, R, G, W, P): ");
+    scanf_s("%4s", input, 5);
+    for (int i = 0; i < 4; i++) {
+        playerCombo->attempt[i] = (Color)input[i];
+        playerCombo->result[i] = SOL_UNCHECKED;
+    }
+}
+
 void sayBye() {
     printf("\n Thank you for playing with me");
 }

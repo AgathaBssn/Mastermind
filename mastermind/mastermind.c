@@ -1,11 +1,14 @@
+
 #include <stdlib.h>
 #include <time.h>
 #include "mastermind.h"
 #include "colors.h"
 #include "combo.h"
+#include "gamestate.h"
+#include "display.h"
 
 int initGame(Combo* soluce) {
-    
+
     static int seeded = 0;
     if (!seeded) {
         srand((unsigned int)time(NULL));
@@ -24,4 +27,26 @@ int initGame(Combo* soluce) {
     }
 
     return 0;
+}
+
+int turn(Gamestate* gameState) {
+    
+    //ask the player to guess
+    Combo* currentguess = getPlayerGuess();
+
+    //ask for verification
+	gameState->history[gameState->turn] = *currentguess;
+	int status = checkCombinaison(gameState);
+
+    //show result
+    showCombo(currentguess);
+    free(currentguess);
+
+    return status;
+}
+
+Combo* getPlayerGuess() {
+    Combo* playerCombo = (Combo*)malloc(sizeof(Combo));
+    askPlayerToGuess(playerCombo);
+    return playerCombo;
 }

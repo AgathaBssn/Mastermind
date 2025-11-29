@@ -9,6 +9,12 @@ void showCombo(const Combo* combo);
 //@returns int 1 if yes 0 if no
 int askToPlay();
 
+//Ask the player to input its guess
+//@param pointer to the player combo to fill
+void askPlayerToGuess(Combo* playerCombo);
+
+
+
 //Last word to the player before closed the game
 void sayBye();
 

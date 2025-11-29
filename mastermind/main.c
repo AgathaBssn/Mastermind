@@ -30,8 +30,9 @@ int main(void) {
         Gamestate *currentGameState = initGameState(&secret);
 
         //launch turns with gameloop
-
-        showCombo(&secret); 
+		turn(currentGameState);
+        //free the gamestate
+		free(currentGameState);
 
        
     }
