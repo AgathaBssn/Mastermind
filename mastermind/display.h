@@ -2,7 +2,8 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-
+// display a combo to the player
+//@param pointer to the combo to show
 void showCombo(const Combo* combo);
 
 //Ask the player if he wants to play
@@ -12,7 +13,6 @@ int askToPlay();
 //Ask the player to input its guess
 //@param pointer to the player combo to fill
 void askPlayerToGuess(Combo* playerCombo);
-
 
 
 //Last word to the player before closed the game

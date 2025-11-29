@@ -2,7 +2,7 @@
 #ifndef SOL_H
 #define SOL_H
 
-// etat possibles
+// each possibles states
 typedef enum {
     SOL_UNCHECKED = '?',
     SOL_WRONG = 'X',

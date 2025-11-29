@@ -45,6 +45,7 @@ int main(void) {
         if (!won) {
             printf("Game over, the soluce was :\n");
             showCombo(&currentGameState->secret);
+			sayBye();
         }
         //free the gamestate
 		free(currentGameState);

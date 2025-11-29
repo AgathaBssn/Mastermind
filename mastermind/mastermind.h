@@ -8,6 +8,7 @@
 #include "gamestate.h"
 
 //Start the game, generate the solution to guess
+// @param soluce pointer to the combinaison to fill
 //@returns 1 if an error occurs, 0 else
 int initGame(Combo* soluce);
 
